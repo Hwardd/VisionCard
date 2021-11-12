@@ -3,7 +3,7 @@ vision bien rikolina
 
 
 ## Installation
-Use the python installer [python] (https://www.python.org/downloads/) to install python
+Use the python installer [python](https://www.python.org/downloads/) to install python
 
 Download and install pip
 
