@@ -29,7 +29,7 @@ while(1):
         for pt in zip(*loc[::-1]):
             cv.rectangle(img_gray, pt, (pt[0] + w, pt[1] + h), (0,255,0), 2)
 
-    cv.imshow("test", img_gray)
+    cv.imshow("test", img_np)
     k=cv.waitKey(100) & 0xFF 
 
     if k == ord('q'):
