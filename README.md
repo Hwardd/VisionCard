@@ -24,4 +24,12 @@ matplotlib
 ```bash
 pip install matplotlib
 ```
+### If pip breaks installing use pipwin
 
+~$ pip install pipwin
+
+~$ pipwin install "package-name"
+
+
+
+## Runn
