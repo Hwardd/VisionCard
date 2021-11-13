@@ -1,7 +1,7 @@
 def buildArrayCards(palo):
   "build array from 1 - 13"
   cards= []
-  for i in range(1, 13):
+  for i in range(1, 14):
     cardRoute= "./images/handCards/"
     cards.append(cardRoute + str(i) + palo + '.png')
   return cards
