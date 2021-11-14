@@ -4,12 +4,13 @@ from matplotlib import pyplot as plt
 from PIL import ImageGrab
 from globalData import *
 
-# print(diamantes)
+
+#print(someCards)
 
 def buildTemplateArray( ):
     "Build template array"
     newTemplate = []
-    for card in diamantes:
+    for card in someCards:
         newTemplate.append(cv.imread(card,0))
     return newTemplate
 
