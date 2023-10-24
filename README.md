@@ -1,35 +1,12 @@
 # VisionCard
 vision bien rikolina
 
+## First time
+### Usa Power Shell Admin y resetea la terminal al final
+pip3 install virtualenv
+virtualenv venv #Agrega al path de sistema
+pip3 install opencv-python matplotlib Pillow numpy
 
-## Installation
-Use the python installer [python](https://www.python.org/downloads/) to install python
-
-Download and install pip
-
-```bash
- curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
- python get-pip.py
-```
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install dependecies.
-
-opencv-python
- 
-```bash
-pip install opencv-python
-```
-matplotlib
-
-```bash
-pip install matplotlib
-```
-### If pip breaks installing use pipwin
-
-~$ pip install pipwin
-
-~$ pipwin install "package-name"
-
-
-
-## Runn
+## Run
+.\venv\Scripts\activate
+python3 ./holo.py

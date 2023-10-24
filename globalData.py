@@ -6,12 +6,12 @@ def buildArrayCards(palo):
     cards.append(cardRoute + str(i) + palo + '.png')
   return cards
 
-treboles= buildArrayCards('t')
-corazones= buildArrayCards('c')
+treboles= buildArrayCards('c')
+corazones= buildArrayCards('h')
 diamantes= buildArrayCards('d')
-picas= buildArrayCards('p')
+picas= buildArrayCards('s')
 
 allCards = treboles + corazones + diamantes + picas
-someCards = diamantes + picas
+#someCards = diamantes + picas
 
-testCards= ["./images/handCards/carta1.png", "./images/handCards/carta2.png"]
+#testCards= ["./images/handCards/Ac.png", "./images/handCards/Kc.png"]

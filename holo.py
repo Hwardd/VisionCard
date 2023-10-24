@@ -5,12 +5,12 @@ from PIL import ImageGrab
 from globalData import *
 
 
-#print(someCards)
+print(allCards)
 
 def buildTemplateArray( ):
     "Build template array"
     newTemplate = []
-    for card in someCards:
+    for card in allCards:
         newTemplate.append(cv.imread(card,0))
     return newTemplate
 
