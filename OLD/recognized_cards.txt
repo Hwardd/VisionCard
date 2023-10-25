@@ -1,0 +1,11 @@
+./images/handCards/9s.png
+./images/handCards/3h.png
+./images/handCards/1s.png
+./images/handCards/13c.png
+./images/handCards/12d.png
+./images/handCards/6d.png
+./images/handCards/7h.png
+./images/handCards/2c.png
+./images/handCards/13s.png
+./images/handCards/1c.png
+./images/handCards/2s.png

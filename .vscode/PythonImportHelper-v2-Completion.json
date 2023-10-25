@@ -1,0 +1,384 @@
+[
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "ImageGrab",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "load_card_templates",
+        "importPath": "config.configHelpers",
+        "description": "config.configHelpers",
+        "isExtraImport": true,
+        "detail": "config.configHelpers",
+        "documentation": {}
+    },
+    {
+        "label": "take_table_screenshot",
+        "importPath": "config.configHelpers",
+        "description": "config.configHelpers",
+        "isExtraImport": true,
+        "detail": "config.configHelpers",
+        "documentation": {}
+    },
+    {
+        "label": "ALL_CARD_TEMPLATES",
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "isExtraImport": true,
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_SCREENSHOT_PATH",
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "isExtraImport": true,
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "image_to_mat",
+        "importPath": "visionStuff.otherOperations",
+        "description": "visionStuff.otherOperations",
+        "isExtraImport": true,
+        "detail": "visionStuff.otherOperations",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_hand_roi",
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "isExtraImport": true,
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
+        "label": "get_pot_amount_roi",
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "isExtraImport": true,
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
+        "label": "get_table_cards_roi",
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "isExtraImport": true,
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
+        "label": "recognize_cards",
+        "importPath": "visionStuff.imageRecognition",
+        "description": "visionStuff.imageRecognition",
+        "isExtraImport": true,
+        "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "recognize_text_from_mat",
+        "importPath": "visionStuff.imageRecognition",
+        "description": "visionStuff.imageRecognition",
+        "isExtraImport": true,
+        "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "pytesseract",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytesseract",
+        "description": "pytesseract",
+        "detail": "pytesseract",
+        "documentation": {}
+    },
+    {
+        "label": "gameExtractor",
+        "importPath": "scripts.gameExtractor",
+        "description": "scripts.gameExtractor",
+        "isExtraImport": true,
+        "detail": "scripts.gameExtractor",
+        "documentation": {}
+    },
+    {
+        "label": "load_card_templates",
+        "kind": 2,
+        "importPath": "config.configHelpers",
+        "description": "config.configHelpers",
+        "peekOfCode": "def load_card_templates(path: str) -> list:\n    \"\"\"Carga las plantillas de cartas y sus identificadores.\"\"\"\n    templates = []\n    for template_name in os.listdir(path):\n        template_image = cv.imread(os.path.join(path, template_name), 0)  # 0 para cargar en escala de grises\n        template_id = os.path.splitext(template_name)[0]  # Eliminar la extensión .png\n        templates.append((template_image, template_id))\n    return templates\ndef take_table_screenshot(TABLE_SCREENSHOT_PATH):\n    screenshot = ImageGrab.grab(bbox=(0,0,970,692))",
+        "detail": "config.configHelpers",
+        "documentation": {}
+    },
+    {
+        "label": "take_table_screenshot",
+        "kind": 2,
+        "importPath": "config.configHelpers",
+        "description": "config.configHelpers",
+        "peekOfCode": "def take_table_screenshot(TABLE_SCREENSHOT_PATH):\n    screenshot = ImageGrab.grab(bbox=(0,0,970,692))\n    screenshot.save(TABLE_SCREENSHOT_PATH)",
+        "detail": "config.configHelpers",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATE_DIR",
+        "kind": 5,
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "peekOfCode": "TEMPLATE_DIR = \"./images/handCards\"\nALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "ALL_CARD_TEMPLATES",
+        "kind": 5,
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "peekOfCode": "ALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_SCREENSHOT_PATH",
+        "kind": 5,
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "peekOfCode": "TABLE_SCREENSHOT_PATH = \"screenshot.png\"\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "ALL_CONSTS",
+        "kind": 5,
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "peekOfCode": "ALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "gameExtractor",
+        "kind": 2,
+        "importPath": "scripts.gameExtractor",
+        "description": "scripts.gameExtractor",
+        "peekOfCode": "def gameExtractor():\n    take_table_screenshot(TABLE_SCREENSHOT_PATH)\n    gray_image = image_to_mat(TABLE_SCREENSHOT_PATH)\n    my_hand_roi = get_my_hand_roi(gray_image)\n    table_cards_roi = get_table_cards_roi(gray_image)\n    pot_amount_roi = get_pot_amount_roi(gray_image)\n    my_hand = recognize_cards(my_hand_roi, ALL_CARD_TEMPLATES)\n    table_cards = recognize_cards(table_cards_roi, ALL_CARD_TEMPLATES)\n    pot_amount = recognize_text_from_mat(pot_amount_roi)\n    print({",
+        "detail": "scripts.gameExtractor",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "recognize_cards",
+        "kind": 2,
+        "importPath": "visionStuff.imageRecognition",
+        "description": "visionStuff.imageRecognition",
+        "peekOfCode": "def recognize_cards(roi, templates):\n    \"\"\"Reconocimiento de cartas.\"\"\"\n    detected_cards = []\n    for template, template_id in templates:\n        w, h = template.shape[::-1]\n        res = cv.matchTemplate(roi, template, cv.TM_CCOEFF_NORMED)\n        threshold = 0.95\n        loc = np.where(res >= threshold)\n        for pt in zip(*loc[::-1]):\n            # Evita la duplicación y agrega el identificador de la carta",
+        "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "recognize_text_from_mat",
+        "kind": 2,
+        "importPath": "visionStuff.imageRecognition",
+        "description": "visionStuff.imageRecognition",
+        "peekOfCode": "def recognize_text_from_mat(roi):\n    \"\"\"Extracción de texto.\"\"\"\n    # Convertir la matriz numpy a una imagen PIL para usar con pytesseract\n    roi_image = Image.fromarray(roi)\n    # Usar pytesseract para extraer texto\n    text = pytesseract.image_to_string(roi_image, config='--psm 6')\n    return text.strip().replace('Pot: ', '')",
+        "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "image_to_mat",
+        "kind": 2,
+        "importPath": "visionStuff.otherOperations",
+        "description": "visionStuff.otherOperations",
+        "peekOfCode": "def image_to_mat(image_path: str):\n    \"\"\"Procesa imagen y la convierte a matriz Mat\"\"\"\n    mat_image = cv.imread(image_path)\n    gray_image = cv.cvtColor(mat_image, cv.COLOR_BGR2GRAY)\n    return gray_image\ndef roi_tester(roi: np.ndarray ):\n    \"\"\"Muestra la imagen capturada de la region de interes (roi) dada\"\"\"\n    cv.imshow('roi_tester', roi)\n    cv.waitKey(0)\n    cv.destroyAllWindows()",
+        "detail": "visionStuff.otherOperations",
+        "documentation": {}
+    },
+    {
+        "label": "roi_tester",
+        "kind": 2,
+        "importPath": "visionStuff.otherOperations",
+        "description": "visionStuff.otherOperations",
+        "peekOfCode": "def roi_tester(roi: np.ndarray ):\n    \"\"\"Muestra la imagen capturada de la region de interes (roi) dada\"\"\"\n    cv.imshow('roi_tester', roi)\n    cv.waitKey(0)\n    cv.destroyAllWindows()",
+        "detail": "visionStuff.otherOperations",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_hand_roi",
+        "kind": 2,
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "peekOfCode": "def get_my_hand_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés de mi mano.\"\"\"\n    height, width = gray_image.shape\n    return gray_image[int(height * 0.62):int(height * 0.72), int(width * 0.428):int(width * 0.56)]\ndef get_table_cards_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés de las cartas en la mesa.\"\"\"\n    height, width = gray_image.shape\n    return gray_image[int(height * 0.35):int(height * 0.48), int(width * 0.32):int(width * 0.67)]\ndef get_pot_amount_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés del monto del bote.\"\"\"",
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
+        "label": "get_table_cards_roi",
+        "kind": 2,
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "peekOfCode": "def get_table_cards_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés de las cartas en la mesa.\"\"\"\n    height, width = gray_image.shape\n    return gray_image[int(height * 0.35):int(height * 0.48), int(width * 0.32):int(width * 0.67)]\ndef get_pot_amount_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés del monto del bote.\"\"\"\n    height, width = gray_image.shape\n    # Estas proporciones se basan en la observación de la imagen proporcionada.\n    # Es posible que debas ajustar estas proporciones si cambia la resolución o si la interfaz de usuario es diferente.\n    y_start = int(height * 0.30)",
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
+        "label": "get_pot_amount_roi",
+        "kind": 2,
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "peekOfCode": "def get_pot_amount_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés del monto del bote.\"\"\"\n    height, width = gray_image.shape\n    # Estas proporciones se basan en la observación de la imagen proporcionada.\n    # Es posible que debas ajustar estas proporciones si cambia la resolución o si la interfaz de usuario es diferente.\n    y_start = int(height * 0.30)\n    y_end = int(height * 0.35)  \n    x_start = int(width * 0.42)  \n    x_end = int(width * 0.58)    \n    return gray_image[y_start:y_end, x_start:x_end]",
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "def main():\n    # Script actual\n    gameExtractor()\nif __name__ == \"__main__\":\n    main()",
+        "detail": "index",
+        "documentation": {}
+    }
+]
