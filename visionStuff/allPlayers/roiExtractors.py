@@ -1,11 +1,6 @@
 import numpy as np
-from visionStuff.otherOperations import roi_tester
-
-def roi_detector_tester(gray_image: np.ndarray, coordinates=(.10,.20,.30,.40)):
-    """Extraer zonas de interés de mi juego (par, color, o lo que tenga formado)."""
-    height, width = gray_image.shape
-    subImage= gray_image[int(height *coordinates[0]):int(height *coordinates[1]), int(width * coordinates[2]):int(width *coordinates[3])]
-    roi_tester(subImage)
+import cv2 as cv
+from config.constants import BET_DOLLAR_SIGN_TEMPLATE
 
 def get_my_hand_roi(gray_image: np.ndarray):
     """Extraer zonas de interés de mi mano."""
@@ -41,3 +36,38 @@ def get_my_game_roi(gray_image: np.ndarray):
     """Extraer zonas de interés de mi juego (par, color, o lo que tenga formado)."""
     height, width = gray_image.shape
     return gray_image[int(height * 0.728):int(height * 0.77), int(width * 0.75):int(width * 0.98)]
+
+def get_bet_zone_roi(original_image):
+    """Recibe una grey image roi con la zona donde apuesta un jugador, busca el signo de $ y retorna un roi con únicamente la zona del dinero apostado"""
+    # Usar template matching para encontrar el signo $
+    res = cv.matchTemplate(original_image, BET_DOLLAR_SIGN_TEMPLATE, cv.TM_CCOEFF_NORMED)
+    _, max_val, _, max_loc = cv.minMaxLoc(res)
+
+    # Introducir un umbral de coincidencia
+    THRESHOLD = 0.8
+    if max_val < THRESHOLD:
+        return None
+
+    top_left = max_loc
+    bottom_right = (top_left[0] + BET_DOLLAR_SIGN_TEMPLATE.shape[1], top_left[1] + BET_DOLLAR_SIGN_TEMPLATE.shape[0])
+
+
+    # Corrección en la asignación de x y y
+    x, y = max_loc
+
+    # Definir la ROI a la derecha del signo $
+    roi_width = 30
+    roi_height = BET_DOLLAR_SIGN_TEMPLATE.shape[0]
+
+    # Ajustar el ancho de la ROI si se sale de la imagen
+    if x + BET_DOLLAR_SIGN_TEMPLATE.shape[1] + roi_width > original_image.shape[1]:
+        roi_width = original_image.shape[1] - (x + BET_DOLLAR_SIGN_TEMPLATE.shape[1])
+
+    # Verificar si la ROI tiene un tamaño válido
+    if roi_width <= 0 or roi_height <= 0:
+        return None
+
+    roi = original_image[y:y+roi_height, x+BET_DOLLAR_SIGN_TEMPLATE.shape[1]:x+BET_DOLLAR_SIGN_TEMPLATE.shape[1]+roi_width]
+
+    return roi
+
