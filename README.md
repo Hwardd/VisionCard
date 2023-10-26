@@ -8,7 +8,7 @@ vision bien rikolina
 
 pip3 install virtualenv
 virtualenv venv #Agrega al path de sistema
-pip3 install opencv-python matplotlib Pillow numpy pytesseract
+pip3 install opencv-python matplotlib Pillow numpy pytesseract pyperclip
 Nota: para pytesseract es necesario instalar en sistema operativo (https://github.com/UB-Mannheim/tesseract/wiki)
 
 ## Run

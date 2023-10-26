@@ -50,7 +50,39 @@
         "documentation": {}
     },
     {
+        "label": "image_to_mat",
+        "importPath": "visionStuff.otherOperations",
+        "description": "visionStuff.otherOperations",
+        "isExtraImport": true,
+        "detail": "visionStuff.otherOperations",
+        "documentation": {}
+    },
+    {
+        "label": "image_to_mat",
+        "importPath": "visionStuff.otherOperations",
+        "description": "visionStuff.otherOperations",
+        "isExtraImport": true,
+        "detail": "visionStuff.otherOperations",
+        "documentation": {}
+    },
+    {
+        "label": "roi_tester",
+        "importPath": "visionStuff.otherOperations",
+        "description": "visionStuff.otherOperations",
+        "isExtraImport": true,
+        "detail": "visionStuff.otherOperations",
+        "documentation": {}
+    },
+    {
         "label": "ALL_CARD_TEMPLATES",
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "isExtraImport": true,
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "DEALER_TEMPLATE",
         "importPath": "config.constants",
         "description": "config.constants",
         "isExtraImport": true,
@@ -66,11 +98,27 @@
         "documentation": {}
     },
     {
-        "label": "image_to_mat",
-        "importPath": "visionStuff.otherOperations",
-        "description": "visionStuff.otherOperations",
+        "label": "BET_DOLLAR_SIGN_TEMPLATE",
+        "importPath": "config.constants",
+        "description": "config.constants",
         "isExtraImport": true,
-        "detail": "visionStuff.otherOperations",
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_chips_roi",
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "isExtraImport": true,
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_game_roi",
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "isExtraImport": true,
+        "detail": "visionStuff.positioExtractors",
         "documentation": {}
     },
     {
@@ -98,6 +146,30 @@
         "documentation": {}
     },
     {
+        "label": "roi_detector_tester",
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "isExtraImport": true,
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
+        "label": "detect_dealer_position",
+        "importPath": "visionStuff.imageRecognition",
+        "description": "visionStuff.imageRecognition",
+        "isExtraImport": true,
+        "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "extract_bets_from_positions",
+        "importPath": "visionStuff.imageRecognition",
+        "description": "visionStuff.imageRecognition",
+        "isExtraImport": true,
+        "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
         "label": "recognize_cards",
         "importPath": "visionStuff.imageRecognition",
         "description": "visionStuff.imageRecognition",
@@ -111,6 +183,32 @@
         "description": "visionStuff.imageRecognition",
         "isExtraImport": true,
         "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "string_text_cleaner",
+        "importPath": "utils.stringUtils",
+        "description": "utils.stringUtils",
+        "isExtraImport": true,
+        "detail": "utils.stringUtils",
+        "documentation": {}
+    },
+    {
+        "label": "pyperclip",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyperclip",
+        "description": "pyperclip",
+        "detail": "pyperclip",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
         "documentation": {}
     },
     {
@@ -166,6 +264,14 @@
         "documentation": {}
     },
     {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "load_card_templates",
         "kind": 2,
         "importPath": "config.configHelpers",
@@ -188,7 +294,7 @@
         "kind": 5,
         "importPath": "config.constants",
         "description": "config.constants",
-        "peekOfCode": "TEMPLATE_DIR = \"./images/handCards\"\nALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "peekOfCode": "TEMPLATE_DIR = \"./images/handCards\"\nALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nDEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template = cv.imread('./images/others/betDolarSign.png', cv.IMREAD_GRAYSCALE)\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
         "detail": "config.constants",
         "documentation": {}
     },
@@ -197,7 +303,7 @@
         "kind": 5,
         "importPath": "config.constants",
         "description": "config.constants",
-        "peekOfCode": "ALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "peekOfCode": "ALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nDEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template = cv.imread('./images/others/betDolarSign.png', cv.IMREAD_GRAYSCALE)\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
         "detail": "config.constants",
         "documentation": {}
     },
@@ -206,7 +312,25 @@
         "kind": 5,
         "importPath": "config.constants",
         "description": "config.constants",
-        "peekOfCode": "TABLE_SCREENSHOT_PATH = \"screenshot.png\"\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "peekOfCode": "TABLE_SCREENSHOT_PATH = \"screenshot.png\"\nDEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template = cv.imread('./images/others/betDolarSign.png', cv.IMREAD_GRAYSCALE)\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "DEALER_TEMPLATE",
+        "kind": 5,
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "peekOfCode": "DEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template = cv.imread('./images/others/betDolarSign.png', cv.IMREAD_GRAYSCALE)\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "BET_DOLLAR_SIGN_TEMPLATE",
+        "kind": 5,
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "peekOfCode": "BET_DOLLAR_SIGN_TEMPLATE = dealer_template = cv.imread('./images/others/betDolarSign.png', cv.IMREAD_GRAYSCALE)\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
         "detail": "config.constants",
         "documentation": {}
     },
@@ -224,8 +348,26 @@
         "kind": 2,
         "importPath": "scripts.gameExtractor",
         "description": "scripts.gameExtractor",
-        "peekOfCode": "def gameExtractor():\n    take_table_screenshot(TABLE_SCREENSHOT_PATH)\n    gray_image = image_to_mat(TABLE_SCREENSHOT_PATH)\n    my_hand_roi = get_my_hand_roi(gray_image)\n    table_cards_roi = get_table_cards_roi(gray_image)\n    pot_amount_roi = get_pot_amount_roi(gray_image)\n    my_hand = recognize_cards(my_hand_roi, ALL_CARD_TEMPLATES)\n    table_cards = recognize_cards(table_cards_roi, ALL_CARD_TEMPLATES)\n    pot_amount = recognize_text_from_mat(pot_amount_roi)\n    print({",
+        "peekOfCode": "def gameExtractor():\n    take_table_screenshot(TABLE_SCREENSHOT_PATH)\n    gray_image = image_to_mat(TABLE_SCREENSHOT_PATH)\n    bets = extract_bets_from_positions(gray_image)\n    my_hand_roi = get_my_hand_roi(gray_image)\n    my_hand = recognize_cards(my_hand_roi, ALL_CARD_TEMPLATES)\n    table_cards_roi = get_table_cards_roi(gray_image)\n    table_cards = recognize_cards(table_cards_roi, ALL_CARD_TEMPLATES)\n    pot_amount_roi = get_pot_amount_roi(gray_image)\n    pot_amount = recognize_text_from_mat(pot_amount_roi)",
         "detail": "scripts.gameExtractor",
+        "documentation": {}
+    },
+    {
+        "label": "string_number_cleaner",
+        "kind": 2,
+        "importPath": "utils.stringUtils",
+        "description": "utils.stringUtils",
+        "peekOfCode": "def string_number_cleaner(texto):\n    # Usamos una expresión regular para encontrar todos los dígitos y comas\n    # y luego usamos ''.join() para combinarlos en un solo string\n    resultado = ''.join(re.findall(r'[0-9,]', texto))\n    # Si no se encontraron caracteres numéricos ni comas, devolvemos None\n    if not resultado:\n        return None\n    return resultado\ndef string_text_cleaner(texto):\n    # Usamos una expresión regular para encontrar todos los dígitos y comas",
+        "detail": "utils.stringUtils",
+        "documentation": {}
+    },
+    {
+        "label": "string_text_cleaner",
+        "kind": 2,
+        "importPath": "utils.stringUtils",
+        "description": "utils.stringUtils",
+        "peekOfCode": "def string_text_cleaner(texto):\n    # Usamos una expresión regular para encontrar todos los dígitos y comas\n    # y luego usamos ''.join() para combinarlos en un solo string\n    resultado = ''.join(re.findall(r'[0-9A-Za-z,]', texto))\n    # Si no se encontraron caracteres numéricos ni comas, devolvemos None\n    if not resultado:\n        return None\n    return resultado",
+        "detail": "utils.stringUtils",
         "documentation": {}
     },
     {
@@ -323,7 +465,34 @@
         "kind": 2,
         "importPath": "visionStuff.imageRecognition",
         "description": "visionStuff.imageRecognition",
-        "peekOfCode": "def recognize_text_from_mat(roi):\n    \"\"\"Extracción de texto.\"\"\"\n    # Convertir la matriz numpy a una imagen PIL para usar con pytesseract\n    roi_image = Image.fromarray(roi)\n    # Usar pytesseract para extraer texto\n    text = pytesseract.image_to_string(roi_image, config='--psm 6')\n    return text.strip().replace('Pot: ', '')",
+        "peekOfCode": "def recognize_text_from_mat(roi):\n    \"\"\"Extracción de texto.\"\"\"\n    # Convertir la matriz numpy a una imagen PIL para usar con pytesseract\n    roi_image = Image.fromarray(roi)\n    # Usar pytesseract para extraer texto\n    text = pytesseract.image_to_string(roi_image, config='--psm 6')\n    return text.strip().replace('Pot: ', '')\ndef detect_dealer_position(gray_image, dealer_template):\n    positions = {\n        'D': (.58, .68, .35, .45), # me",
+        "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "detect_dealer_position",
+        "kind": 2,
+        "importPath": "visionStuff.imageRecognition",
+        "description": "visionStuff.imageRecognition",
+        "peekOfCode": "def detect_dealer_position(gray_image, dealer_template):\n    positions = {\n        'D': (.58, .68, .35, .45), # me\n        'D+1': (.40, .50, .15, .20), # one\n        'D+2': (.30, .40, .19, .27), # two\n        'D+3': (.22, .32, .50, .60), # three\n        'D+4': (.30, .40, .72, .82), # four\n        'D-1': (.52, .62, .68, .78) # five\n    }\n    h, w = gray_image.shape",
+        "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "get_bet_zone_roi",
+        "kind": 2,
+        "importPath": "visionStuff.imageRecognition",
+        "description": "visionStuff.imageRecognition",
+        "peekOfCode": "def get_bet_zone_roi(original_image):\n    # Usar template matching para encontrar el signo $\n    res = cv.matchTemplate(original_image, BET_DOLLAR_SIGN_TEMPLATE, cv.TM_CCOEFF_NORMED)\n    _, max_val, _, max_loc = cv.minMaxLoc(res)\n    # Introducir un umbral de coincidencia\n    THRESHOLD = 0.8\n    if max_val < THRESHOLD:\n        return None\n    top_left = max_loc\n    bottom_right = (top_left[0] + BET_DOLLAR_SIGN_TEMPLATE.shape[1], top_left[1] + BET_DOLLAR_SIGN_TEMPLATE.shape[0])",
+        "detail": "visionStuff.imageRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "extract_bets_from_positions",
+        "kind": 2,
+        "importPath": "visionStuff.imageRecognition",
+        "description": "visionStuff.imageRecognition",
+        "peekOfCode": "def extract_bets_from_positions(gray_image):\n    positions = {\n        'V1': (.49, .59, .23, .42),\n        'V2': (.315, .355, .25, .45),\n        'V3': (.22, .32, .47, .67),\n        'V4': (.28, .33, .55, .73),\n        'V-1': (.52, .57, .62, .81)\n    }\n    bets = {}\n    for villano, (top, bottom, left, right) in positions.items():",
         "detail": "visionStuff.imageRecognition",
         "documentation": {}
     },
@@ -343,6 +512,15 @@
         "description": "visionStuff.otherOperations",
         "peekOfCode": "def roi_tester(roi: np.ndarray ):\n    \"\"\"Muestra la imagen capturada de la region de interes (roi) dada\"\"\"\n    cv.imshow('roi_tester', roi)\n    cv.waitKey(0)\n    cv.destroyAllWindows()",
         "detail": "visionStuff.otherOperations",
+        "documentation": {}
+    },
+    {
+        "label": "roi_detector_tester",
+        "kind": 2,
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "peekOfCode": "def roi_detector_tester(gray_image: np.ndarray, coordinates=(.10,.20,.30,.40)):\n    \"\"\"Extraer zonas de interés de mi juego (par, color, o lo que tenga formado).\"\"\"\n    height, width = gray_image.shape\n    subImage= gray_image[int(height *coordinates[0]):int(height *coordinates[1]), int(width * coordinates[2]):int(width *coordinates[3])]\n    roi_tester(subImage)\ndef get_my_hand_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés de mi mano.\"\"\"\n    height, width = gray_image.shape\n    return gray_image[int(height * 0.62):int(height * 0.72), int(width * 0.428):int(width * 0.56)]\ndef get_table_cards_roi(gray_image: np.ndarray):",
+        "detail": "visionStuff.positioExtractors",
         "documentation": {}
     },
     {
@@ -373,11 +551,29 @@
         "documentation": {}
     },
     {
+        "label": "get_my_chips_roi",
+        "kind": 2,
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "peekOfCode": "def get_my_chips_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés de mis fichas.\"\"\"\n    height, width = gray_image.shape\n    return gray_image[int(height * 0.735):int(height * 0.78), int(width * 0.47):int(width * 0.57)]\ndef get_my_game_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés de mi juego (par, color, o lo que tenga formado).\"\"\"\n    height, width = gray_image.shape\n    return gray_image[int(height * 0.728):int(height * 0.77), int(width * 0.75):int(width * 0.98)]",
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_game_roi",
+        "kind": 2,
+        "importPath": "visionStuff.positioExtractors",
+        "description": "visionStuff.positioExtractors",
+        "peekOfCode": "def get_my_game_roi(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés de mi juego (par, color, o lo que tenga formado).\"\"\"\n    height, width = gray_image.shape\n    return gray_image[int(height * 0.728):int(height * 0.77), int(width * 0.75):int(width * 0.98)]",
+        "detail": "visionStuff.positioExtractors",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "def main():\n    # Script actual\n    gameExtractor()\nif __name__ == \"__main__\":\n    main()",
+        "peekOfCode": "def main():\n    # Script actual\n    while True:\n        sleep(0.35)  # Pausa de 500 ms\n        gameExtractor()\nif __name__ == \"__main__\":\n    main()",
         "detail": "index",
         "documentation": {}
     }

@@ -1,4 +1,11 @@
 import numpy as np
+from visionStuff.otherOperations import roi_tester
+
+def roi_detector_tester(gray_image: np.ndarray, coordinates=(.10,.20,.30,.40)):
+    """Extraer zonas de interés de mi juego (par, color, o lo que tenga formado)."""
+    height, width = gray_image.shape
+    subImage= gray_image[int(height *coordinates[0]):int(height *coordinates[1]), int(width * coordinates[2]):int(width *coordinates[3])]
+    roi_tester(subImage)
 
 def get_my_hand_roi(gray_image: np.ndarray):
     """Extraer zonas de interés de mi mano."""
@@ -24,3 +31,13 @@ def get_pot_amount_roi(gray_image: np.ndarray):
     x_end = int(width * 0.58)    
     
     return gray_image[y_start:y_end, x_start:x_end]
+
+def get_my_chips_roi(gray_image: np.ndarray):
+    """Extraer zonas de interés de mis fichas."""
+    height, width = gray_image.shape
+    return gray_image[int(height * 0.735):int(height * 0.78), int(width * 0.47):int(width * 0.57)]
+
+def get_my_game_roi(gray_image: np.ndarray):
+    """Extraer zonas de interés de mi juego (par, color, o lo que tenga formado)."""
+    height, width = gray_image.shape
+    return gray_image[int(height * 0.728):int(height * 0.77), int(width * 0.75):int(width * 0.98)]
