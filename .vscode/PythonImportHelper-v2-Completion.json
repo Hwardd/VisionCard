@@ -26,6 +26,14 @@
         "documentation": {}
     },
     {
+        "label": "ImageGrab",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
         "label": "Image",
         "importPath": "PIL",
         "description": "PIL",
@@ -66,6 +74,56 @@
         "documentation": {}
     },
     {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "ALL_CARD_TEMPLATES",
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "isExtraImport": true,
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "AC_TEMPLATE",
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "isExtraImport": true,
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "AS_TEMPLATE",
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "isExtraImport": true,
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
         "label": "ALL_CARD_TEMPLATES",
         "importPath": "config.constants",
         "description": "config.constants",
@@ -91,6 +149,22 @@
     },
     {
         "label": "ALL_CARD_TEMPLATES",
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "isExtraImport": true,
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "AC_TEMPLATE",
+        "importPath": "config.constants",
+        "description": "config.constants",
+        "isExtraImport": true,
+        "detail": "config.constants",
+        "documentation": {}
+    },
+    {
+        "label": "AS_TEMPLATE",
         "importPath": "config.constants",
         "description": "config.constants",
         "isExtraImport": true,
@@ -132,6 +206,14 @@
     },
     {
         "label": "recognize_bets_sixP",
+        "importPath": "visionStuff.sixPlayers.elementsRecognition",
+        "description": "visionStuff.sixPlayers.elementsRecognition",
+        "isExtraImport": true,
+        "detail": "visionStuff.sixPlayers.elementsRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "recognize_chips_sixP",
         "importPath": "visionStuff.sixPlayers.elementsRecognition",
         "description": "visionStuff.sixPlayers.elementsRecognition",
         "isExtraImport": true,
@@ -219,20 +301,11 @@
         "documentation": {}
     },
     {
-        "label": "time",
-        "kind": 6,
+        "label": "get_chips_sixP",
+        "importPath": "visionStuff.sixPlayers.roiExtractors",
+        "description": "visionStuff.sixPlayers.roiExtractors",
         "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
+        "detail": "visionStuff.sixPlayers.roiExtractors",
         "documentation": {}
     },
     {
@@ -242,15 +315,6 @@
         "importPath": "re",
         "description": "re",
         "detail": "re",
-        "documentation": {}
-    },
-    {
-        "label": "numpy",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "numpy",
-        "description": "numpy",
-        "detail": "numpy",
         "documentation": {}
     },
     {
@@ -327,7 +391,7 @@
         "kind": 5,
         "importPath": "config.constants",
         "description": "config.constants",
-        "peekOfCode": "TEMPLATE_DIR = \"./images/handCards\"\nALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nDEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "peekOfCode": "TEMPLATE_DIR = \"./images/handCards\"\nALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nDEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nAC_TEMPLATE=image_to_mat('./images/handCards/Ac.png')\nAS_TEMPLATE=image_to_mat('./images/handCards/As.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,",
         "detail": "config.constants",
         "documentation": {}
     },
@@ -336,7 +400,7 @@
         "kind": 5,
         "importPath": "config.constants",
         "description": "config.constants",
-        "peekOfCode": "ALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nDEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "peekOfCode": "ALL_CARD_TEMPLATES = load_card_templates(TEMPLATE_DIR)\nTABLE_SCREENSHOT_PATH = \"screenshot.png\"\nDEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nAC_TEMPLATE=image_to_mat('./images/handCards/Ac.png')\nAS_TEMPLATE=image_to_mat('./images/handCards/As.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH",
         "detail": "config.constants",
         "documentation": {}
     },
@@ -345,7 +409,7 @@
         "kind": 5,
         "importPath": "config.constants",
         "description": "config.constants",
-        "peekOfCode": "TABLE_SCREENSHOT_PATH = \"screenshot.png\"\nDEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "peekOfCode": "TABLE_SCREENSHOT_PATH = \"screenshot.png\"\nDEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nAC_TEMPLATE=image_to_mat('./images/handCards/Ac.png')\nAS_TEMPLATE=image_to_mat('./images/handCards/As.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
         "detail": "config.constants",
         "documentation": {}
     },
@@ -354,7 +418,7 @@
         "kind": 5,
         "importPath": "config.constants",
         "description": "config.constants",
-        "peekOfCode": "DEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "peekOfCode": "DEALER_TEMPLATE = image_to_mat('./images/others/dealer.png')\nBET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nAC_TEMPLATE=image_to_mat('./images/handCards/Ac.png')\nAS_TEMPLATE=image_to_mat('./images/handCards/As.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
         "detail": "config.constants",
         "documentation": {}
     },
@@ -363,7 +427,7 @@
         "kind": 5,
         "importPath": "config.constants",
         "description": "config.constants",
-        "peekOfCode": "BET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
+        "peekOfCode": "BET_DOLLAR_SIGN_TEMPLATE = dealer_template =image_to_mat('./images/others/betDolarSign.png')\nAC_TEMPLATE=image_to_mat('./images/handCards/Ac.png')\nAS_TEMPLATE=image_to_mat('./images/handCards/As.png')\nALL_CONSTS = {\n    \"TEMPLATE_DIR\": TEMPLATE_DIR,\n    \"ALL_CARD_TEMPLATES\": ALL_CARD_TEMPLATES,\n    \"TABLE_SCREENSHOT_PATH\": TABLE_SCREENSHOT_PATH\n}",
         "detail": "config.constants",
         "documentation": {}
     },
@@ -377,11 +441,65 @@
         "documentation": {}
     },
     {
+        "label": "load_templates",
+        "kind": 2,
+        "importPath": "scripts.cards_detector",
+        "description": "scripts.cards_detector",
+        "peekOfCode": "def load_templates(cards):\n    \"\"\"\n    Load image templates from given paths.\n    Args:\n    - cards (list of str): Paths to card images.\n    Returns:\n    - list: List of loaded image templates.\n    \"\"\"\n    return [cv.imread(card, 0) for card in cards]\ndef capture_screen(bbox=(0,0,970,692)):",
+        "detail": "scripts.cards_detector",
+        "documentation": {}
+    },
+    {
+        "label": "capture_screen",
+        "kind": 2,
+        "importPath": "scripts.cards_detector",
+        "description": "scripts.cards_detector",
+        "peekOfCode": "def capture_screen(bbox=(0,0,970,692)):\n    \"\"\"\n    Capture screen region and return its grayscale and BGR versions.\n    Args:\n    - bbox (tuple): Screen region to capture.\n    Returns:\n    - tuple: Grayscale and BGR versions of captured region.\n    \"\"\"\n    img = ImageGrab.grab(bbox=bbox)\n    img_np = np.array(img)",
+        "detail": "scripts.cards_detector",
+        "documentation": {}
+    },
+    {
+        "label": "recognize_cards",
+        "kind": 2,
+        "importPath": "scripts.cards_detector",
+        "description": "scripts.cards_detector",
+        "peekOfCode": "def recognize_cards(roi, img_bgr):\n    \"\"\"Dado una zona roi detecta todas las cartas que se encuentran en el roi.\"\"\"\n    detected_cards = initial_card_detection(roi, img_bgr)\n    detected_cards = reevaluate_ace_detection(roi, detected_cards)\n    print(detected_cards)\n    return detected_cards\ndef initial_card_detection(roi, img_bgr):\n    \"\"\"Realiza la detección inicial de cartas con el umbral predeterminado.\"\"\"\n    detected_cards = []\n    for template, template_id in ALL_CARD_TEMPLATES:",
+        "detail": "scripts.cards_detector",
+        "documentation": {}
+    },
+    {
+        "label": "initial_card_detection",
+        "kind": 2,
+        "importPath": "scripts.cards_detector",
+        "description": "scripts.cards_detector",
+        "peekOfCode": "def initial_card_detection(roi, img_bgr):\n    \"\"\"Realiza la detección inicial de cartas con el umbral predeterminado.\"\"\"\n    detected_cards = []\n    for template, template_id in ALL_CARD_TEMPLATES:\n        w, h = template.shape[::-1]\n        res = cv.matchTemplate(roi, template, cv.TM_CCOEFF_NORMED)\n        threshold = 0.94\n        loc = np.where(res >= threshold) \n        for pt in zip(*loc[::-1]):\n            if template_id not in detected_cards:",
+        "detail": "scripts.cards_detector",
+        "documentation": {}
+    },
+    {
+        "label": "reevaluate_ace_detection",
+        "kind": 2,
+        "importPath": "scripts.cards_detector",
+        "description": "scripts.cards_detector",
+        "peekOfCode": "def reevaluate_ace_detection(roi, detected_cards):\n    \"\"\"Reevalúa la detección de As y Ac con un umbral más alto.\"\"\"\n    if \"Ac\" in detected_cards or \"As\" in detected_cards:\n        for specific_template, specific_id in [(AC_TEMPLATE, \"Ac\"), (AS_TEMPLATE, \"As\")]:\n            res = cv.matchTemplate(roi, specific_template, cv.TM_CCOEFF_NORMED)\n            threshold_specific = 0.96\n            if np.max(res) >= threshold_specific:\n                if specific_id == \"Ac\" and \"As\" in detected_cards:\n                    detected_cards.remove(\"As\")\n                elif specific_id == \"As\" and \"Ac\" in detected_cards:",
+        "detail": "scripts.cards_detector",
+        "documentation": {}
+    },
+    {
+        "label": "cards_detector",
+        "kind": 2,
+        "importPath": "scripts.cards_detector",
+        "description": "scripts.cards_detector",
+        "peekOfCode": "def cards_detector():\n    recognized_cards = set()\n    while True:\n        print('\\n\\n')\n        sleep(0.5)  # Pausa de 500 ms\n        img_gray, img_bgr = capture_screen()\n        newly_recognized = recognize_cards(img_gray, img_bgr=img_bgr)\n        recognized_cards.update(newly_recognized)\n        cv.imshow(\"Scanned Screen\", img_bgr)\n        # Save recognized cards to a file",
+        "detail": "scripts.cards_detector",
+        "documentation": {}
+    },
+    {
         "label": "six_players_normal_table_extractor",
         "kind": 2,
         "importPath": "scripts.six_players_normal_table_extractor",
         "description": "scripts.six_players_normal_table_extractor",
-        "peekOfCode": "def six_players_normal_table_extractor():\n    take_table_screenshot(TABLE_SCREENSHOT_PATH)\n    gray_image = image_to_mat(TABLE_SCREENSHOT_PATH)\n    bets = recognize_bets_sixP(gray_image)\n    my_hand_roi = get_my_hand_roi(gray_image)\n    my_hand = recognize_cards(my_hand_roi)\n    table_cards_roi = get_table_cards_roi(gray_image)\n    table_cards = recognize_cards(table_cards_roi)\n    pot_amount_roi = get_pot_amount_roi(gray_image)\n    pot_amount = recognize_text(pot_amount_roi)",
+        "peekOfCode": "def six_players_normal_table_extractor():\n    take_table_screenshot(TABLE_SCREENSHOT_PATH)\n    gray_image = image_to_mat(TABLE_SCREENSHOT_PATH)\n    chips_roi=get_chips_sixP(gray_image)\n    chips=recognize_chips_sixP(chips_roi)\n    bets = recognize_bets_sixP(gray_image)\n    my_hand_roi = get_my_hand_roi(gray_image)\n    my_hand = recognize_cards(my_hand_roi)\n    table_cards_roi = get_table_cards_roi(gray_image)\n    table_cards = recognize_cards(table_cards_roi)",
         "detail": "scripts.six_players_normal_table_extractor",
         "documentation": {}
     },
@@ -516,7 +634,25 @@
         "kind": 2,
         "importPath": "visionStuff.allPlayers.elementsRecognition",
         "description": "visionStuff.allPlayers.elementsRecognition",
-        "peekOfCode": "def recognize_cards(roi):\n    \"\"\"Dado una zona roi detecta todas las cartas que se encuentran en el roi\"\"\"\n    detected_cards = []\n    for template, template_id in ALL_CARD_TEMPLATES:\n        w, h = template.shape[::-1]\n        res = cv.matchTemplate(roi, template, cv.TM_CCOEFF_NORMED)\n        threshold = 0.95\n        loc = np.where(res >= threshold)\n        for pt in zip(*loc[::-1]):\n            # Evita la duplicación y agrega el identificador de la carta",
+        "peekOfCode": "def recognize_cards(roi):\n    \"\"\"Dado una zona roi detecta todas las cartas que se encuentran en el roi.\"\"\"\n    detected_cards = initial_card_detection(roi)\n    detected_cards = reevaluate_ace_detection(roi, detected_cards)\n    return detected_cards\ndef initial_card_detection(roi):\n    \"\"\"Realiza la detección inicial de cartas con el umbral predeterminado.\"\"\"\n    detected_cards = []\n    for template, template_id in ALL_CARD_TEMPLATES:\n        w, h = template.shape[::-1]",
+        "detail": "visionStuff.allPlayers.elementsRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "initial_card_detection",
+        "kind": 2,
+        "importPath": "visionStuff.allPlayers.elementsRecognition",
+        "description": "visionStuff.allPlayers.elementsRecognition",
+        "peekOfCode": "def initial_card_detection(roi):\n    \"\"\"Realiza la detección inicial de cartas con el umbral predeterminado.\"\"\"\n    detected_cards = []\n    for template, template_id in ALL_CARD_TEMPLATES:\n        w, h = template.shape[::-1]\n        res = cv.matchTemplate(roi, template, cv.TM_CCOEFF_NORMED)\n        threshold = 0.94\n        loc = np.where(res >= threshold) \n        for pt in zip(*loc[::-1]):\n            if template_id not in detected_cards:",
+        "detail": "visionStuff.allPlayers.elementsRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "reevaluate_ace_detection",
+        "kind": 2,
+        "importPath": "visionStuff.allPlayers.elementsRecognition",
+        "description": "visionStuff.allPlayers.elementsRecognition",
+        "peekOfCode": "def reevaluate_ace_detection(roi, detected_cards):\n    \"\"\"Reevalúa la detección de As y Ac con un umbral más alto.\"\"\"\n    if \"Ac\" in detected_cards or \"As\" in detected_cards:\n        for specific_template, specific_id in [(AC_TEMPLATE, \"Ac\"), (AS_TEMPLATE, \"As\")]:\n            res = cv.matchTemplate(roi, specific_template, cv.TM_CCOEFF_NORMED)\n            threshold_specific = 0.96\n            if np.max(res) >= threshold_specific:\n                if specific_id == \"Ac\" and \"As\" in detected_cards:\n                    detected_cards.remove(\"As\")\n                elif specific_id == \"As\" and \"Ac\" in detected_cards:",
         "detail": "visionStuff.allPlayers.elementsRecognition",
         "documentation": {}
     },
@@ -597,7 +733,7 @@
         "kind": 2,
         "importPath": "visionStuff.sixPlayers.elementsRecognition",
         "description": "visionStuff.sixPlayers.elementsRecognition",
-        "peekOfCode": "def recognize_bets_sixP(gray_image):\n    \"\"\"Six Player Table: A partir de la gray image de la mesa, detecta las zonas de apuesta de los villanos y retorna las apuestas (si es que hubo)\"\"\"\n    positions = {\n        'V1': (.49, .59, .23, .42),\n        'V2': (.315, .355, .25, .45),\n        'V3': (.22, .32, .47, .67),\n        'V4': (.28, .33, .55, .73),\n        'V-1': (.52, .57, .62, .81)\n    }\n    bets = {}",
+        "peekOfCode": "def recognize_bets_sixP(gray_image):\n    \"\"\"Six Player Table: A partir de la gray image de la mesa, detecta las zonas de apuesta de los villanos y retorna las apuestas (si es que hubo)\"\"\"\n    positions = {\n        'V1': (.49, .57, .23, .44),\n        'V2': (.30, .36, .25, .46),\n        'V3': (.21, .30, .46, .67),\n        'V4': (.28, .345, .55, .73),\n        'V-1': (.52, .57, .61, .81)\n    }\n    bets = {}",
         "detail": "visionStuff.sixPlayers.elementsRecognition",
         "documentation": {}
     },
@@ -611,11 +747,29 @@
         "documentation": {}
     },
     {
+        "label": "recognize_chips_sixP",
+        "kind": 2,
+        "importPath": "visionStuff.sixPlayers.elementsRecognition",
+        "description": "visionStuff.sixPlayers.elementsRecognition",
+        "peekOfCode": "def recognize_chips_sixP(chips_roi):\n    chips = {\n            'yo': recognize_text(chips_roi['yo']),\n            'V1': recognize_text(chips_roi['V1']),\n            'V2': recognize_text(chips_roi['V2']),\n            'V3': recognize_text(chips_roi['V3']),\n            'V4': recognize_text(chips_roi['V4']),\n            'V-1': recognize_text(chips_roi['V-1']),\n        }\n    return chips",
+        "detail": "visionStuff.sixPlayers.elementsRecognition",
+        "documentation": {}
+    },
+    {
+        "label": "get_chips_sixP",
+        "kind": 2,
+        "importPath": "visionStuff.sixPlayers.roiExtractors",
+        "description": "visionStuff.sixPlayers.roiExtractors",
+        "peekOfCode": "def get_chips_sixP(gray_image: np.ndarray):\n    \"\"\"Extraer zonas de interés de mi juego (par, color, o lo que tenga formado).\"\"\"\n    yo=(.73, .78, .465, .575)\n    V1=(.558, .605, .035, .155)\n    V2=(.265, .31, .075, .183)\n    V3=(.17, .215, .41, .525)\n    V4=(.26, .31, .805, .925)\n    V5=(.555, .605, .838, .95)\n    height, width = gray_image.shape\n    roi_positions = {",
+        "detail": "visionStuff.sixPlayers.roiExtractors",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "def main():\n   repeat_script(six_players_normal_table_extractor, 0.350)\nif __name__ == \"__main__\":\n    main()",
+        "peekOfCode": "def main():\n   repeat_script(six_players_normal_table_extractor, 0.350)\n   # six_players_normal_table_extractor()\n   # cards_detector()\nif __name__ == \"__main__\":\n    main()",
         "detail": "index",
         "documentation": {}
     }
